@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<script src="index.js"></script>
 <html>
   <head>
+    <script src="index.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: blue;
+      }
+      svg#art {
+        margin-top: 1em;
+      }
+      div{
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+      }
+    </style>
     <title>Aaarto</title>
   </head>
   <body>
-    <svg
+    <div>
+      <svg
       version="1.1"
-      width="300"
-      height="300"
+      width="500"
+      height="500"
       xmlns="http://www.w3.org/2000/svg"
       id="art"
     >
-      <rect width="100%" height="100%" fill="gray" />
-      <rect x="20" y="20" width="10" height="10" fill="blue" />
-      <circle cx="150" cy="100" r="80" fill="green" />
-      <text x="150" y="125" font-size="50" text-anchor="middle" fill="white">
-        Aaarto
-      </text>
+      <rect width="100%" height="100%" fill="white" />
     </svg>
+    Brush:
+    Circle
+    <input type="radio" name="a" value="b">
+    Square
+    <input type="radio" name="a" value="c"
+
+    </div>
   </body>
 </html>
