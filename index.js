@@ -1,23 +1,19 @@
-const makeCircle = (x, y) => {
-  const circleColor = "red";
-  const circleSize = 20;
+const makeCircle = (x, y, brushSize, color) => {
   const path = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  path.setAttribute("r", circleSize);
+  path.setAttribute("r", (brushSize/2));
   path.setAttribute("cx", x);
   path.setAttribute("cy", y);
-  path.setAttribute("fill", circleColor);
+  path.setAttribute("fill", color);
 
   return path;
 };
-const makeSquare = (x, y) => {
-  const squareLength = 20;
-  const squareColor = "blue";
+const makeSquare = (x, y, brushSize, color) => {
   const path = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  path.setAttribute("width", squareLength);
-  path.setAttribute("height", squareLength);
+  path.setAttribute("width", brushSize);
+  path.setAttribute("height", brushSize);
   path.setAttribute("x", x);
   path.setAttribute("y", y);
-  path.setAttribute("fill", squareColor);
+  path.setAttribute("fill", color);
 
   return path;
 };
@@ -30,10 +26,12 @@ const makeCanvas = () => {
     const x = clientX - left;
     const y = clientY - top;
     const brushType = document.querySelector("#shape input:checked").value;
+    const brushSize = document.querySelector("#size input").value;
+    const brushColor = document.querySelector("#color input").value;
     if (brushType === "circle") {
-      brush = makeCircle(x, y);
+      brush = makeCircle(x, y, brushSize, brushColor);
     } else {
-      brush = makeSquare(x, y);
+      brush = makeSquare(x, y, brushSize, brushColor);
     }
     canvas.append(brush);
   });

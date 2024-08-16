@@ -3,18 +3,32 @@ body {
   background-color: #111;
   margin: 0;
 }
+h1 {
+  background-color: rgba(100, 100, 100, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+  font-size: 1em;
+  color: #eee;
+}
+h1 a{
+    font-size: 0.75em;
+    text-decoration: none;
+    color: #ccc;
+}
 div {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: gray;
 }
-svg{
-    cursor: crosshair;
+svg {
+  cursor: crosshair;
 }
 section {
   display: flex;
@@ -23,21 +37,21 @@ section {
   color: #fff;
   background-color: #222;
   border-radius: 0.5em;
+  margin: 0;
 }
 section label {
-    background: #333;
-    padding: 0.25em;
-    margin: 0.25em;
-    border-radius: 0.5em;
+  background: #333;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 0.5em;
 }
 section h3 {
   margin: 0.5em;
 }
 section.panel {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 700px;
-    padding: 1em;
-    background-color: gray;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 700px;
+  background-color: gray;
 }
