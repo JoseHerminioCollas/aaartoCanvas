@@ -7,6 +7,7 @@
   </head>
   <body>
     <div>
+      <h1>Aaarto <a href="http://goatstone.com" target="new">goatstone</a></h1>
       <svg
         version="1.1"
         width="500"
@@ -21,16 +22,19 @@
           <h3>Shape</h3>
           <label>
             Circle
-            <input type="radio" name="shape" value="circle" checked  />
+            <input type="radio" name="shape" value="circle" checked />
           </label>
-          <label> Square <input type="radio" name="shape" value="square"  /> </label>
+          <label>
+            Square <input type="radio" name="shape" value="square" />
+          </label>
         </section>
-        <section>
+        <section id="size">
           <h3>Size</h3>
-          <input type="range" />
+          <input type="range" min="1" max="300" value="20" />
         </section>
-        <section>
+        <section id="color">
           <h3>Color</h3>
+          <input type="color" value="#cccccc" />
         </section>
       </section>
     </div>
