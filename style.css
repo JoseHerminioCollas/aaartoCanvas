@@ -1,0 +1,32 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #111;
+  margin: 0;
+}
+div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #222;
+  border-radius: 0.5em;
+}
+section label {
+    background: #333;
+    padding: 0.25em;
+    margin: 0.25em;
+    border-radius: 0.5em;
+}
+section h3 {
+  margin: 0.5em;
+}
