@@ -21,18 +21,27 @@ const makeSquare = (x, y) => {
 
   return path;
 };
-/**
- * Initialize the application
- */
-const init = () => {
-  const el = document.querySelector("#art");
-  el.addEventListener("click", (event) => {
+const makeCanvas = () => {
+  const canvas = document.querySelector("#art");
+  canvas.addEventListener("click", (event) => {
+    let brush = "";
     const { clientX, clientY } = event;
     const { top, left } = event.target.getBoundingClientRect();
     const x = clientX - left;
     const y = clientY - top;
-    el.append(makeCircle(x, y));
-    el.append(makeSquare(x, y));
+    const brushType = document.querySelector("#shape input:checked").value;
+    if (brushType === "circle") {
+      brush = makeCircle(x, y);
+    } else {
+      brush = makeSquare(x, y);
+    }
+    canvas.append(brush);
   });
+};
+/**
+ * Initialize the application
+ */
+const init = () => {
+  makeCanvas();
 };
 window.addEventListener("load", init);
